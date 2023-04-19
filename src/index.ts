@@ -1,14 +1,11 @@
 import { User } from './models/User';
 
-const user = new User({ name: 'myName', age: 30, id: 1 });
+const user = new User({ name: 'new record', age: 8 });
 
-// axios.post('http://localhost:3000/users', {
-//   name: 'abc',
-//   age: 22,
-// });
+// user.set({ name: 'NEW NAME', age: 40 });
+user.save();
+// user.fetch();
 
-user.fetch();
-
-setTimeout(() => {
-  console.log(user);
-}, 4000);
+// setTimeout(() => {
+//   console.log(user);
+// }, 4000);
