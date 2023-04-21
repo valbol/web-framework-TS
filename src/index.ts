@@ -1,9 +1,10 @@
 import { User } from './models/User';
 
-const user = new User({ name: 'new record', age: 8 });
+const user = new User({ id: 1, name: 'John', age: 25 });
 
-user.events.on('change', () => {
-  console.log('Change!');
+// ? The parentheses (....) invoking the on function in Eventing class
+user.on('save', () => {
+  console.log(user);
 });
 
-user.events.trigger('change');
+user.save();

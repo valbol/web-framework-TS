@@ -1,0 +1,16 @@
+//  Rule of thumb in JS/TS ==>
+//  'this' will be equal to whatever to the left of our function call
+const colors = {
+  color: 'red',
+  printColor() {
+    console.log(this.color);
+  },
+};
+
+// to the left colors so this replaced w/ colors
+colors.printColor();
+
+const printColor = colors.printColor;
+// to the left undefined so this replaced w/ undefined and causing an error
+printColor();
+// ====================================================================================================
