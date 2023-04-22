@@ -1,10 +1,10 @@
 import { User } from './models/User';
+import { Collection } from './models/Collection';
 
-const user = User.buildUser({ id: 1, name: 'John', age: 25 });
+const collection = new Collection('http://localhost:3000/users');
 
-// ? The parentheses (....) invoking the on function in Eventing class
-user.on('change', () => {
-  console.log(user);
+collection.on('change', () => {
+  console.log(collection);
 });
 
-user.fetch();
+collection.fetch();
