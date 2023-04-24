@@ -14,3 +14,5 @@ const printColor = colors.printColor;
 // to the left undefined so this replaced w/ undefined and causing an error
 printColor();
 // ====================================================================================================
+
+// IF THERE IS A BIDIRECTIONAL RELATIONS BETWEEN 2 CLASS (BOTH NEED EACH OTHER TO COMMUNICATE ADN FUNCTIONING) COMPOSITION MIGHT BE WRONG SOLUTION
